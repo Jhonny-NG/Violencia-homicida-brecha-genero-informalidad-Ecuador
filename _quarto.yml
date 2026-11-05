@@ -1,25 +1,17 @@
+
 project:
-  type: book
-
-book:
-  title: "Violencia homicida brecha genero informalidad Ecuador"
-  author: "Norah Jones"
-  date: "5/11/2026"
-  chapters:
-    - index.qmd
-    - intro.qmd
-    - summary.qmd
-    - references.qmd
-
-bibliography: references.bib
+  type: default
+  output-dir: docs
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
-  pdf:
-    documentclass: scrreprt
+    theme: cosmo
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    code-fold: true
+    code-tools: true
+    embed-resources: true
 
-editor: visual
+lang: es
 

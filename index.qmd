@@ -1,9 +1,27 @@
-# Preface {.unnumbered}
 
-This is a Quarto book.
+---
+title: "Violencia homicida y brecha de género en la informalidad laboral en Ecuador"
+subtitle: "Un análisis de datos de panel a nivel provincial"
+author:
+  - name: "José Ordoñez"
+    affiliation: "Universidad Nacional de Loja"
+  - name: "Jhonny Guaman"
+    affiliation: "Universidad Nacional de Loja"
+  - name: "Cristian Salazar"
+    affiliation: "Universidad Nacional de Loja"
+date: "2026"
+lang: es
+---
 
-To learn more about Quarto books visit <https://quarto.org/docs/books>.
+{{< include secciones/01_revision_literatura.qmd >}}
 
-```{r}
-1 + 1
-```
+{{< include secciones/02_objetivos.qmd >}}
+
+{{< include secciones/03_modelo_teorico.qmd >}}
+
+{{< include secciones/04_datos.qmd >}}
+
+{{< include secciones/05_resultados.qmd >}}
+
+{{< include secciones/06_conclusiones.qmd >}}
+
