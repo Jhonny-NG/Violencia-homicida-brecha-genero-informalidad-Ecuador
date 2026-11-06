@@ -2,4 +2,15 @@
 
 ## Objetivo general
 
+Analizar la asociación entre la violencia homicida de las provincias y la brecha de informalidad laboral entre mujeres y hombres ocupados en Ecuador, mediante un modelo de datos de panel con efectos fijos, con microdatos de la ENEMDU y registros de homicidios del Ministerio del Interior del periodo con datos comparables desde 2014, para aportar evidencia que oriente políticas de seguridad y de empleo con enfoque de género.
+
 ## Objetivos específicos
+
+1.	Construir un panel provincia-año con la brecha de informalidad (mujeres menos hombres) y la tasa de homicidios intencionales por 100.000 habitantes de las 24 provincias, a partir de la ENEMDU, del registro del Ministerio del Interior y de las proyecciones de población del INEC, para contar con una base comparable entre provincias y en el tiempo.
+
+2.	Describir la distribución y la evolución de la violencia homicida y de la brecha de informalidad por provincia, mediante estadística descriptiva, mapas y gráficos de series, para identificar patrones territoriales y temporales.
+
+3.	Estimar la asociación entre la tasa de homicidios del año anterior y la brecha de informalidad, mediante un modelo de efectos fijos de provincia y de año con controles de composición, para contrastar si los aumentos de la violencia dentro de una provincia se asocian con aumentos de su brecha.
+
+4.	Evaluar la robustez de los resultados, mediante especificaciones alternativas de la tasa de homicidios y una regresión con microdatos que incluya la interacción entre ser mujer y la tasa, para verificar que la conclusión no dependa de una sola especificación.
+

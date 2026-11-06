@@ -1,0 +1,323 @@
+
+/* =====================================================
+   FORMATO APA 7 - INVESTIGACIÓN COMPLETA
+   UNIVERSIDAD NACIONAL DE LOJA
+   ===================================================== */
+
+/* 1. CONFIGURACIÓN GENERAL */
+html {
+    font-size: 12pt;
+}
+
+body {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+    color: #000000;
+    background: #ffffff;
+    line-height: 2;
+}
+
+/* Ancho del documento */
+#quarto-content main.content {
+    max-width: 6.5in;
+}
+
+/* 2. TEXTO Y PÁRRAFOS */
+.content p {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+    line-height: 2;
+    text-align: left;
+    text-indent: 0.5in;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #000000;
+}
+
+/* Evitar sangría en elementos especiales */
+.content blockquote p,
+.content figcaption,
+.content caption,
+.content .table-note,
+.content .figure-note,
+.content .no-indent,
+.content .callout p {
+    text-indent: 0;
+}
+
+/* 3. TÍTULOS Y SUBTÍTULOS APA 7 */
+
+/* Nivel 1 */
+.content h1 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: center;
+    color: #000000;
+    line-height: 2;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Nivel 2 */
+.content h2 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: left;
+    color: #000000;
+    line-height: 2;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Nivel 3 */
+.content h3 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+    font-weight: bold;
+    font-style: italic;
+    text-align: left;
+    color: #000000;
+    line-height: 2;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Nivel 4 */
+.content h4 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+    font-weight: bold;
+    text-align: left;
+    color: #000000;
+    line-height: 2;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Nivel 5 */
+.content h5 {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+    font-weight: bold;
+    font-style: italic;
+    text-align: left;
+    color: #000000;
+    line-height: 2;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* 4. LISTAS */
+.content ul,
+.content ol {
+    padding-left: 0.5in;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 2;
+}
+
+.content li {
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* 5. CITAS TEXTUALES EXTENSAS */
+.content blockquote {
+    margin-left: 0.5in;
+    margin-right: 0;
+    padding: 0;
+    border: none;
+    font-size: 12pt;
+    line-height: 2;
+    text-align: left;
+}
+
+/* 6. TABLAS APA 7 */
+.content table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 11pt;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #000000;
+}
+
+/* Encabezados */
+.content table thead th {
+    font-weight: bold;
+    text-align: center;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    border-left: none;
+    border-right: none;
+    padding: 6px 8px;
+}
+
+/* Celdas */
+.content table tbody td {
+    text-align: left;
+    border: none;
+    padding: 6px 8px;
+    vertical-align: middle;
+}
+
+/* Línea final de la tabla */
+.content table tbody tr:last-child td {
+    border-bottom: 1px solid #000000;
+}
+
+/* Eliminar bordes verticales */
+.content table th,
+.content table td {
+    border-left: none !important;
+    border-right: none !important;
+}
+
+/* Títulos de las tablas */
+.content table caption {
+    caption-side: top;
+    text-align: left;
+    font-size: 12pt;
+    font-weight: normal;
+    line-height: 2;
+    padding: 0;
+    margin: 0;
+}
+
+/* Notas de tablas */
+.table-note {
+    font-size: 10pt;
+    line-height: 1.5;
+    text-align: left;
+    margin-top: 4px;
+    margin-bottom: 12px;
+}
+
+/* 7. FIGURAS Y GRÁFICOS */
+.content figure {
+    margin: 12px 0;
+    text-align: left;
+}
+
+.content figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Descripción de figuras */
+.content figcaption {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 10pt;
+    line-height: 1.5;
+    text-align: left;
+    margin-top: 6px;
+    color: #000000;
+}
+
+/* Clase para notas de figuras */
+.figure-note {
+    font-size: 10pt;
+    line-height: 1.5;
+    text-align: left;
+    margin-top: 4px;
+    margin-bottom: 12px;
+}
+
+/* 8. ECUACIONES */
+.content .math.display {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+/* 9. CITAS Y REFERENCIAS BIBLIOGRÁFICAS */
+#refs,
+.references {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 12pt;
+    line-height: 2;
+}
+
+/* Sangría francesa */
+#refs .csl-entry,
+.references .csl-entry {
+    padding-left: 0.5in;
+    text-indent: -0.5in;
+    margin-bottom: 0;
+    line-height: 2;
+    text-align: left;
+}
+
+/* Enlaces */
+.content a {
+    color: #000000;
+    text-decoration: underline;
+}
+
+/* 10. NOTAS AL PIE */
+.content .footnotes {
+    font-size: 10pt;
+    line-height: 2;
+}
+
+.content .footnotes p {
+    font-size: 10pt;
+    text-indent: 0;
+}
+
+/* 11. CÓDIGO */
+pre,
+code {
+    font-family: "Courier New", monospace;
+}
+
+/* 12. IMPRESIÓN */
+@page {
+    size: letter;
+    margin: 1in;
+}
+
+@media print {
+    body {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 12pt;
+        line-height: 2;
+        background: white;
+    }
+
+    #quarto-content main.content {
+        max-width: 100%;
+    }
+
+    .content p {
+        text-align: left;
+        text-indent: 0.5in;
+    }
+
+    #TOC,
+    .sidebar,
+    .quarto-header,
+    .quarto-footer,
+    .code-tools,
+    .quarto-title-banner {
+        display: none !important;
+    }
+
+    figure,
+    table {
+        break-inside: avoid;
+    }
+
+    h1,
+    h2,
+    h3 {
+        break-after: avoid;
+    }
+}

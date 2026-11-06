@@ -1,11 +1,46 @@
 # Modelo teórico
 
+El modelo plantea que la brecha de informalidad entre mujeres y hombres en cada provincia se asocia con el nivel de violencia homicida, una vez controladas las diferencias de composición entre provincias.
+
 ## Hipótesis
+
+H0: dentro de una provincia, los cambios en la violencia homicida no se asocian con cambios en la brecha de informalidad (β1 = 0).
+
+H1: dentro de una provincia, un aumento de la violencia homicida se asocia con un aumento de la brecha, es decir, con más informalidad femenina relativa a la masculina (β1 > 0).
+
 
 ## Especificación del modelo
 
+$$
+\text{Brecha}_{pt} = \alpha_p + \lambda_t + \beta_1 \ln(1+\text{Tasa}_{p,t-1}) + \beta_2 \text{nnivins}_{pt} + \beta_3 \text{Edad}_{pt} + \beta_4 \text{Area}_{pt} + \beta_5 \text{p04}_{pt} + \beta_6 \text{p06}_{pt} + \beta_7 \text{Etnia}_{pt} + \varepsilon_{pt}
+$$
+
 ## Variables
+
+
+**Tabla 1**
+
+*Descripción de las variables utilizadas en el modelo econométrico*
+
+| Variable | Fuente | Cómo se mide | Signo esperado | Por qué entra al modelo |
+|:--|:--|:--|:--:|:--|
+| **Brecha (Y)** | ENEMDU: secemp, Sexo, empleo | Porcentaje de mujeres ocupadas con empleo informal menos porcentaje de hombres ocupados con empleo informal, en puntos porcentuales y en nivel. | Variable explicada | Es la medida de interés; va en nivel porque puede ser negativa. |
+| **ln(1 + Tasa) (X)** | Ministerio del Interior (s. f.) y proyecciones del INEC (2024). | Víctimas de homicidio intencional por 100.000 habitantes en 2024, con logaritmo de 1 + tasa. | Positivo (H1) | Aldeco Leo et al. (2025) encuentran el efecto con la tasa rezagada; el logaritmo modera la concentración en pocas provincias y el 1 evita el cero (por ejemplo, Galápagos). |
+| **nnivins** | ENEMDU: nnivins | Porcentaje de ocupadas con secundaria completa o más menos el de ocupados, en puntos porcentuales. | Negativo | La informalidad se asocia con baja educación (La Porta y Shleifer, 2014); si las ocupadas tienen relativamente más educación, su informalidad relativa debería bajar. |
+| **Edad** | ENEMDU: Edad | Porcentaje de ocupados de 15 a 29 años. | Ambiguo | Controla la composición por edad del empleo; depende de si la entrada al mercado laboral es más informal para mujeres o para hombres. Díaz-Sánchez y Correa (2024) la incluyen, con su forma cuadrática, entre los determinantes del acceso al empleo formal en Ecuador. |
+| **Área** | ENEMDU: Area | Porcentaje de ocupados en área urbana. | Ambiguo | La estructura del empleo urbano y rural es distinta; además, el costo de desplazarse al trabajo es un canal de diferencia por sexo (Mishra et al., 2021). El área de residencia también se usa como control del acceso al empleo formal en Ecuador (Díaz-Sánchez y Correa, 2024). |
+| **p04** | ENEMDU: p04, Sexo | Porcentaje de jefes de hogar que son mujeres. | Positivo (débil) | Aproxima la carga de cuidado del hogar, que cambia las decisiones laborales de las mujeres (Fernández et al., 2014). |
+| **p06** | ENEMDU: p06 | Porcentaje de ocupados casados o en unión libre. | Ambiguo | Aldeco Leo et al. (2025) controlan por estado civil; en el hogar, la oferta laboral de un cónyuge responde a la del otro (Lundberg, 1985). |
+| **Etnia** | ENEMDU: Etnia | Porcentaje de ocupados que no se identifican como mestizos ni blancos. | Ambiguo | Control de composición de la fuerza laboral de cada provincia. En Ecuador, las personas indígenas tienen menor probabilidad de acceder al empleo formal que quienes se identifican con otros grupos (Díaz-Sánchez y Correa, 2024), y en Bolivia las mujeres de minorías étnicas ganan menos tanto en el sector formal como en el informal (Pradhan y van Soest, 1995). |
+
+*Nota.* Elaboración propia con base en las variables de la ENEMDU y las fuentes bibliográficas citadas.
 
 ## Interpretación y estimación
 
+Como la violencia está en logaritmo y la brecha en puntos porcentuales, un aumento de 1 % en la tasa de homicidios del año anterior se asocia con un cambio de β1/100 puntos porcentuales en la brecha de esa misma provincia. Con ln(1 + tasa) la lectura es aproximada.
+El modelo se estima por efectos fijos de provincia y de año (estimador intragrupos), con errores estándar agrupados por provincia para admitir correlación serial dentro de cada una. Con solo 24 grupos el agrupamiento puede subestimar los errores, por lo que se complementa con un bootstrap salvaje por grupos. La muestra tiene hasta 264 observaciones (24 provincias por 11 años), y conviene revisar la colinealidad entre controles con el factor de inflación de la varianza. El modelo de efectos aleatorios se estima solo como contraste, con la prueba de Hausman. Como pruebas de robustez se estiman además la tasa del mismo año y con rezagos adicionales, las tasas por tipo de muerte, y muestras sin Guayas y sin los años desde 2023, por el cambio de fuente señalado por el OECO. En la regresión con microdatos, la probabilidad individual de tener empleo informal se explica con una indicadora de mujer, su interacción con ln(1 + tasa) rezagada y controles individuales, con efectos fijos de provincia-año que absorben el efecto principal de la tasa; el coeficiente de la interacción mide el efecto sobre la brecha.
+Se asume linealidad, ausencia de multicolinealidad perfecta y que, una vez incluidos los efectos fijos y los controles, no quedan factores omitidos que cambien en el tiempo dentro de cada provincia y afecten a la vez la violencia y la brecha. También se asume que la brecha de un año no influye en la violencia de los años siguientes; este supuesto se revisa incluyendo un adelanto de la tasa, cuyo coeficiente debería ser cercano a cero.
+
 ## Limitaciones
+
+El panel permite comparar cada provincia consigo misma en el tiempo y elimina las diferencias permanentes entre provincias, pero no los factores que cambian en el tiempo y afectan a la vez la violencia y la brecha, como los choques económicos locales o la llegada de organizaciones criminales. La relación puede ir en ambos sentidos (Dell et al., 2019; Enamorado et al., 2016), y el rezago de un año la atenúa sin resolverla. Con solo 24 provincias hay pocos grupos para la inferencia y la potencia es baja, y un resultado provincial no implica que ocurra a nivel de persona. Además, la serie de homicidios cambia de fuente hacia fines de 2023 (OECO, 2024), y la brecha se estima con muestras pequeñas en las provincias menos pobladas, lo que añade ruido de medición. La pandemia de 2020 pudo afectar de forma desigual a las provincias, algo que los efectos fijos de año no capturan.

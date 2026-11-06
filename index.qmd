@@ -2,15 +2,21 @@
 ---
 title: "Violencia homicida y brecha de género en la informalidad laboral en Ecuador"
 subtitle: "Un análisis de datos de panel a nivel provincial"
+
 author:
   - name: "José Ordoñez"
     affiliation: "Universidad Nacional de Loja"
-  - name: "Jhonny Guaman"
+  - name: "Jhonny Guamán"
     affiliation: "Universidad Nacional de Loja"
   - name: "Cristian Salazar"
     affiliation: "Universidad Nacional de Loja"
+
 date: "2026"
 lang: es
+
+bibliography: references.bib
+csl: apa.csl
+link-citations: true
 ---
 
 {{< include secciones/01_revision_literatura.qmd >}}
@@ -24,4 +30,3 @@ lang: es
 {{< include secciones/05_resultados.qmd >}}
 
 {{< include secciones/06_conclusiones.qmd >}}
-
